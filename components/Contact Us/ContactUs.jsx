@@ -134,7 +134,7 @@ const ContactUs = () => {
                                     href="mailto:contact@zentropytech.com"
                                     className="text-slate-700 dark:text-slate-300 hover:no-underline no-underline"
                                 >
-                                    +919849061671
+                                    +91 9849061671
 
                                 </a>
                             </div>
