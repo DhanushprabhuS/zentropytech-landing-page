@@ -168,8 +168,8 @@ export const CompanySkills = ({ className }) => {
                 "dark:text-slate-400 text-slate-600"
               )}
             >
-              Start collabrating with Highly-skilled developers, grown around with the
-              industry’s best practices.
+              {`Start collabrating with Highly-skilled developers, grown around with the
+              industry's best practices.`}
             </p>
             <a href="#focus">
             <LandingSectionCtaButton >

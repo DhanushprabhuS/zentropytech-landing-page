@@ -3,7 +3,7 @@ import clsx from "clsx"
 import React from "react"
 import Image from 'next/image'
 import { useState, useRef, useEffect  } from "react"
-import { AnimatePresence, motion, useInView } from "framer-motion"
+import { useInView } from "framer-motion"
 import { LandingSectionCtaButton } from "../LandingButtonCTA"
 
 

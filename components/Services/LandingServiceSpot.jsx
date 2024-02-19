@@ -70,7 +70,7 @@ export const LandingSweetSpot = ({ className }) => {
             "dark:text-slate-400",
           )}
         >
-          We're specialize in data analysis and machine learning. We also offer development services in the form of web based front-end applications adopting latest technology and visualization techniques. 
+          {`We're specialize in data analysis and machine learning. We also offer development services in the form of web based front-end applications adopting latest technology and visualization techniques. `}
         </p>
       </div>
 

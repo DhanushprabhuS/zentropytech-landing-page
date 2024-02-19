@@ -76,7 +76,7 @@ const ContactUs = () => {
             "dark:text-slate-400",
           )}
         >
-          "Let's create something extraordinary together!"
+          {`"Let's create something extraordinary together!"`}
         </p>
       </div>
         
