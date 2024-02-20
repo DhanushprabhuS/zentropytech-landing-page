@@ -168,7 +168,7 @@ const AboutUs = () => {
                             "gap-4 landing-sm:gap-8",
                         )}
                     >
-                        <p
+                        <article
                             className={clsx(
                                 "p-0",
                                 "mt-2 landing-sm:mt-4",
@@ -177,7 +177,7 @@ const AboutUs = () => {
                             )}
                         >
                            Zentropy Technologies is a FinTech and Data Science services and consultancy provider. We aim to disrupt financial services like automated trading, portfolio management, crypto trading and blockchain using latest big data technologies, machine learning, and advanced analytics.
-                        </p>
+                        </article>
                         <a href="#contact">
                             <LandingSectionCtaButton>
                                 Contact Us

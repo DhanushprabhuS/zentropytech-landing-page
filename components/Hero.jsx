@@ -136,7 +136,6 @@ const Hero = () => {
                     <LandingHeroAnimation />
                 </div>
             </div>
-            {/** <LandingHeroShowcaseSection /> */}
             <div className='landing-md:hidden -mt-24'>
                 <HeroSvgComponent/>
             </div>

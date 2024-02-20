@@ -103,7 +103,6 @@ const ContactUs = () => {
 
                     <div className="flex flex-col md:gap-8 lg:flex-row lg:gap-10 xl:gap-24">
                         <div className="w-full shrink-0 lg:order-last lg:h-[416px] lg:w-[624px]">
-                            <a  >
                                 <Image
                                     alt={'email-contact'}
                                     className="m-0 p-0 rounded-lg"
@@ -112,7 +111,6 @@ const ContactUs = () => {
                                     height={600}
                                     
                                 />
-                            </a>
                         </div>
 
 

@@ -3,6 +3,8 @@ import { TypeAnimation } from 'react-type-animation';
 import clsx from 'clsx';
 
 const TypeAnimationTagLine = () => {
+
+
   return (
     <TypeAnimation
       sequence={[
