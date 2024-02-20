@@ -104,7 +104,7 @@ export const Footer = () => {
   )
 
   return (
-    <footer className={clsx("w-full")}>
+    <footer className={clsx("w-full")} id="footer">
       <div
         className={clsx(
           "dark:bg-footer-dark-bg"

@@ -14,12 +14,12 @@ const locations = [
     {
         addr: 'Palavanthangal, Chennai',
         state:"TamilNadu-600114",
-        color : 'refine-orange'
+        color : 'refine-blue'
     },
     {
         addr: 'Kondapur, Hyderabad,',
         state: "Telangana-500032",
-        color : 'refine-red'
+        color : 'refine-blue'
     }
 ]
 

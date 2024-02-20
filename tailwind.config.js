@@ -538,20 +538,32 @@ module.exports = {
                   "enterprise-table-right-to-left 0.3s ease-in-out forwards",
               "new-badge-border": "new-badge-border 4s linear infinite",
               reveal: "reveal 0.3s ease-in-out forwards",
-              "slide-in-right":"slide-in-right 0.5s ease-out forwards finite"
+              'menu-slide-in': 'slideInFromTop 0.8s ease-in-out forwards',
+              'menu-slide-out': 'slideOutToTop 0.5s ease-in-out forwards',
+
           },
           keyframes: {
-            "slide-in-right": {
-                "0%": {
-                  transform: "translateX(100%)",
-                  opacity:0
+            slideInFromTop: {
+                '0%': {
+                  transform: 'translateY(-100%)',
+                  opacity: 0,
                 },
-                "100%": {
-                  transform: "translateX(0)",
-                  opacity:1
-                }
-              },
-              reveal: {
+                '100%': {
+                  transform: 'translateY(0)',
+                  opacity: 1,
+                },
+            },
+            slideOutToTop: {
+                '0%': {
+                  transform: 'translateY(0)',
+                  opacity: 1,
+                },
+                '100%': {
+                  transform: 'translateY(-100%)',
+                  opacity: 0,
+                },
+            },
+            reveal: {
                   "0%": {
                       opacity: 0,
                   },

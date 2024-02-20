@@ -1,11 +1,13 @@
 "use client"
 import React from 'react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const HamburgerMenu = () => {
+    const [isOpen,setIsOpen] = useState(false);
     const elementBtn = useRef(null);
     const handleClick = ()=>{
        elementBtn.current?.classList.toggle('open');
+       setIsOpen((prev)=>!prev);
     }
 
     return (
