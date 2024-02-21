@@ -129,7 +129,7 @@ const ContactUs = () => {
                                     <CallIcon className="text-refine-green"/>
                                 </div>
                                 <a
-                                    href="mailto:contact@zentropytech.com"
+                                    href="tel:+919849061671"
                                     className="text-slate-700 dark:text-slate-300 hover:no-underline no-underline"
                                 >
                                     +91 9849061671

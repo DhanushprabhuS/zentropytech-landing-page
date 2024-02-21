@@ -241,7 +241,7 @@ export const Footer = () => {
               "font-normal"
             )}
           >
-            {"©2024, Zentrop Technologies.  Finance | Technology | Data Science "}
+            {"©2024, Zentropy Technologies.  Finance | Technology | Data Science "}
             <HeartOutlinedIcon
               className={clsx("ml-1", "text-refine-red", "inline", "leading-5")}
             />

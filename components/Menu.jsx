@@ -5,6 +5,8 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 const Menu = () => {
+    console.log('Welcome to .:| Zentropy Technologies |:.');
+  
     const menuContent = ['Home', 'About', 'Service', 'Focus', 'Contact'];
     const [isOpen, setIsOpen] = useState(false);
     const elementBtn = useRef(null);
@@ -45,6 +47,7 @@ const Menu = () => {
                     </div>
                 </div>
             
+            {/**Mobile Menu */}
             {isOpen ? (
                 <div className={
                     clsx(

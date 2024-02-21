@@ -393,11 +393,11 @@ module.exports = {
                   "radial-gradient(transparent 30%, rgba(0, 128, 255, 0.1))",
               ],
               "enterprise-cta-dark": [
-                  "url(https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/landing-noise.webp)",
+                  "url(/landing-noise.webp)",
                   "radial-gradient(45% 80% at 50% 50%, rgba(71, 235, 235, 0.15) 0%, rgba(71, 235, 235, 0.00) 100%)",
               ],
               "enterprise-cta-dark-md": [
-                  "url(https://refine.ams3.cdn.digitaloceanspaces.com/website/static/assets/landing-noise.webp)",
+                  "url(/landing-noise.webp)",
                   "radial-gradient(30% 100% at 100% 50%, rgba(71, 235, 235, 0.15) 0%, rgba(71, 235, 235, 0.00) 100%)",
               ],
               "enterprise-cta-light":
@@ -502,10 +502,15 @@ module.exports = {
               "hero-logo-pulse": "hero-logo-pulse 4s ease-in-out infinite",
               "mini-bounce": "mini-bounce 3s ease-in-out infinite",
               "dot-waves": "dot-waves 2.5s linear infinite",
-              "landing-packages-left":
-                  "landing-packages-left 65s linear infinite",
-              "landing-packages-right":
-                  "landing-packages-right 60s linear infinite",
+
+              "landing-packages-left": "landing-packages-left 65s linear infinite",
+
+              "landing-packages-left-mobile": "landing-packages-left 35s linear infinite",
+              
+              "landing-packages-right": "landing-packages-right 60s linear infinite",
+
+              "landing-packages-right-mobile":"landing-packages-right 30s linear infinite",
+
               "code-scroll": "code-scroll 25s linear infinite",
               "beam-spin": "beam-spin 3s linear 1 forwards",
               "landing-hero-beam-line":

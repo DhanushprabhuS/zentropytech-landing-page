@@ -84,7 +84,7 @@ export const FocusPoint = () => {
         src="/templates-hero-dark.png"
         width={1000}
         height={1000}
-        alt="Zen Templates"
+        alt="Zen title Templates"
       />
       <h2
         className={clsx(
@@ -167,10 +167,10 @@ export const FocusPoint = () => {
                         </div>
                     );
                 })}
-    </div>
-    <GetInTouchCTA
-      className={"w-full landing-lg:max-w-[792px] mx-auto"}
-    />
+        </div>
+        <GetInTouchCTA
+          className={"w-full landing-lg:max-w-[792px] mx-auto"}
+        />
     </>
   )
 }

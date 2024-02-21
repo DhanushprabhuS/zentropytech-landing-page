@@ -4,50 +4,6 @@ import { LandingSectionCtaButton } from './LandingButtonCTA'
 
 
 const AboutUs = () => {
-    const aboutUsData = [
-        {
-        icon:'⚡',
-        text:"Development"
-        },
-        {
-        icon:'⚡',
-        text:"Deployment"
-        },
-        {
-        icon:'⚡',
-        text:"Maintanance"
-        },
-        {
-          icon: '⚙️',
-          text:"Reliable"
-        },
-        {
-            icon: '⚙️',
-            text:"Efficient technology"
-        },
-        {
-            icon: '⚙️',
-            text:"Data Management"
-        },
-        {
-          icon: '💪',
-          text: "Data Engineering"
-        },
-        {
-            icon: '💪',
-            text: "Warehouse solutions"
-        },
-        {
-            icon: '🕸️',
-            text: "Web developement"
-        },
-        {
-            icon: '🕸️',
-            text: "Portfolio Managment"
-        }
-        
-      ,
-    ]
     const objectives_1 = [
         {"title": "Innovation Hub", "icon": "🚀"},
         {"title": "Tech Solutions", "icon": "💡"},
@@ -188,7 +144,7 @@ const AboutUs = () => {
 
                 <div className="landing-packages-mask pt-4 landing-md:pt-10">
                     <div className='relative flex items-center justify-end'>
-                        <div className="hover:[animation-play-state:paused] animate-landing-packages-right absolute left-0 top-0 pr-4 w-auto flex items-center gap-[18px] mt-6 relative">
+                        <div className="hover:[animation-play-state:paused] animate-landing-packages-right-mobile landing-md:animate-landing-packages-right absolute left-0 top-0 pr-4 w-auto flex items-center gap-[18px] mt-6 relative">
                                 {
                                     objectives_1.map((data,v)=>{
                                     return(
@@ -206,7 +162,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     <div className="relative flex items-center justify-start">
-                                <div className="hover:[animation-play-state:paused] animate-landing-packages-left absolute left-0 top-0 pr-4 w-auto flex items-center gap-[18px] mt-6 relative">
+                                <div className="hover:[animation-play-state:paused] animate-landing-packages-left-mobile landing-md:animate-landing-packages-left absolute left-0 top-0 pr-4 w-auto flex items-center gap-[18px] mt-6 relative">
                                 {
                                     objectives_2.map((data,v)=>{
                                     return(
