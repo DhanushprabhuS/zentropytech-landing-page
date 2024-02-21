@@ -288,7 +288,7 @@ export const LandingSweetSpot = ({ className }) => {
                     >
                       <Image
                         src={item.imageCode}
-                        alt="Code of refine"
+                        alt="Code of Zentropy"
                         className="rounded-2xl"
                         width={500}
                         height={500}
