@@ -8,6 +8,7 @@ import { CompanySkillsRight } from '@/components/AboutCompany/CompanySkillRight'
 import { FocusPoint } from '@/components/Focus/FocusPoint';
 import ContactUs from '@/components/Contact Us/ContactUs';
 import {Footer} from '@/components/Footer/Footer';
+import { TopAnnouncement } from '@/components/TopAnnouncement';
 
 export default function Home() {
 
@@ -77,6 +78,7 @@ export default function Home() {
           <FocusPoint/>
           <ContactUs/>
       </div>
+     <TopAnnouncement/>
      <Footer/>
 
       <div 
