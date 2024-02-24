@@ -11,9 +11,8 @@ import {Footer} from '@/components/Footer/Footer';
 import { TopAnnouncement } from '@/components/TopAnnouncement';
 
 export default function Home() {
-
-  //1E1E20
-  //slate-900
+  //Dhanush Prabhu S
+  //dhanushprabhusenthil@gmail.com
   return (
     <div
       className={clsx(
@@ -55,7 +54,6 @@ export default function Home() {
             id='about'
           >
             <AboutUs/>
-
             <div
               className={clsx(
                 "flex flex-col landing-md:flex-row",
@@ -78,8 +76,8 @@ export default function Home() {
           <FocusPoint/>
           <ContactUs/>
       </div>
-     <TopAnnouncement/>
-     <Footer/>
+    <TopAnnouncement/>
+    <Footer/>
 
       <div 
         className=" md:hidden absolute bottom-0 left-0 right-0 top-0 

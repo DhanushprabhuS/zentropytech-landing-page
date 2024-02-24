@@ -67,7 +67,9 @@ const Menu = () => {
                     <Link href={'#footer'} className='text-md p-1 text-white font-semibold hover:text-slate-500'>
                             Footer
                     </Link>
+                    <Link href={'/'}>
                     <Image src={'/logo.png'} height={100} width={100} alt='Zentropy' className="rounded-xl" />
+                    </Link>
                 </div>
             ) : null}
             </nav>

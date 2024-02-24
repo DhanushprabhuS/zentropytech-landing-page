@@ -1,6 +1,8 @@
+'use client';
 import clsx from "clsx"
 import React from "react"
 import Image from 'next/image'
+import { useState, useRef, useEffect } from 'react';
 import PngTemplate from "./icons/PngTemplate"
 import { GetInTouchCTA } from "./GetInTouchCTA"
 
@@ -55,6 +57,19 @@ const list = [
 
 export const FocusPoint = () => {
 
+  const ref = useRef(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    });
+
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  
 
   return (
     <>
@@ -119,12 +134,20 @@ export const FocusPoint = () => {
       </p>
     </div>
     <div
+        ref={ref}
         className={clsx(
                     "landing-md:-mt-24",
                     "grid",
                     "grid-cols-1 landing-md:grid-cols-2 landing-lg:grid-cols-3",
                     "gap-4 landing-sm:gap-12 landing-md:gap-6",
                     "mb-4 landing-sm:mb-8 landing-md:mb-2",
+                    'bg-landing-stars',
+                    'bg-refine-cyan-alt',
+                    'rounded-xl',
+                    'p-4',
+                    'landing-lg:p-12',
+                    'overflow-hidden'
+
                 )}
             >
                 {list.map((item, index) => {
@@ -141,7 +164,11 @@ export const FocusPoint = () => {
                                 "dark:bg-slate-800 bg-slate-50",
                                 "rounded-2xl landing-sm:rounded-3xl",
                                 'border-2',
-                                'hover:border-refine-green'
+                                'hover:border-refine-green',
+                                index%2==0
+                                ?isIntersecting?'animate-focus-slide-left':''
+                                :isIntersecting?'animate-focus-slide-right':''
+
                             )}
                         >
                             <div>{item.icon}</div>
@@ -168,6 +195,8 @@ export const FocusPoint = () => {
                     );
                 })}
         </div>
+
+
         <GetInTouchCTA
           className={"w-full landing-lg:max-w-[792px] mx-auto"}
         />
