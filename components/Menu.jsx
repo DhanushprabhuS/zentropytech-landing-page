@@ -51,7 +51,7 @@ const Menu = () => {
             {isOpen ? (
                 <div className={
                     clsx(
-                        'p-4 z-[10] top-20 left-6 right-6',
+                        'p-4 z-[100] top-20 left-6 right-6',
                         'flex flex-col space-y-3 justify-center items-center text-slate-100', 
                         'bg-refine-blue rounded-lg bg-landing-stars',
                         'md:hidden transition-all duration-1000',

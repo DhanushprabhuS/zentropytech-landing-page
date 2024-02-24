@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react';
 import PngTemplate from "./icons/PngTemplate"
 import { GetInTouchCTA } from "./GetInTouchCTA"
+import BackgroundAnimation from "../BackgroundAnimation";
 
 
 const list = [
@@ -26,24 +27,24 @@ const list = [
         description:
             "Trade portfolio management is the primary focus at Zentropy Technologies, where we specialize in optimizing investment strategies and maximizing returns through advanced algorithms.",
     },
-    {
-        icon: <PngTemplate path={'/focus/dsdoodle.png'} title={'Data Science'}/>,
-        title: "Data Science",
-        description:
-            "Data science stands as the central pillar of Zentropy Technologies, driving innovation and powering insightful decision-making for our clients' success.",
-    },
-    {
-        icon: <PngTemplate path={'/focus/dwhdoodle.png'} title={'Data Warehouse'}/>,
-        title: "Data Warehouse",
-        description:
-            "Data warehouse solutions are the cornerstone of Zentropy Technologies, empowering businesses with robust data storage and analytics capabilities for informed decision-making.",
-    },
-    {
-        icon: <PngTemplate path={'/focus/bcdoodle.png'} title={'Block Chain'}/>,
-        title: "Block Chain",
-        description:
-            "Deploy to your own infrastructure without worrying about regulations, performance, and stability. Maintain your current security best practices with no compromises.",
-    },
+  {
+    icon: <PngTemplate path={'/focus/dsdoodle.png'} title={'Data Science'}/>,
+    title: "Data Science",
+    description:
+        "Data science stands as the central pillar of Zentropy Technologies, driving innovation and powering insightful decision-making for our clients' success.",
+},
+{
+    icon: <PngTemplate path={'/focus/dwhdoodle.png'} title={'Data Warehouse'}/>,
+    title: "Data Warehouse",
+    description:
+        "Data warehouse solutions are the cornerstone of Zentropy Technologies, empowering businesses with robust data storage and analytics capabilities for informed decision-making.",
+},
+{
+    icon: <PngTemplate path={'/focus/bcdoodle.png'} title={'Block Chain'}/>,
+    title: "Block Chain",
+    description:
+        "Deploy to your own infrastructure without worrying about regulations, performance, and stability. Maintain your current security best practices with no compromises.",
+},
 ]
 
 /*
@@ -68,8 +69,6 @@ export const FocusPoint = () => {
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
-
-  
 
   return (
     <>
@@ -133,73 +132,80 @@ export const FocusPoint = () => {
         Trust us to elevate your financial portfolio with our expertise.
       </p>
     </div>
-    <div
-        ref={ref}
-        className={clsx(
-                    "landing-md:-mt-24",
-                    "grid",
-                    "grid-cols-1 landing-md:grid-cols-2 landing-lg:grid-cols-3",
-                    "gap-4 landing-sm:gap-12 landing-md:gap-6",
-                    "mb-4 landing-sm:mb-8 landing-md:mb-2",
-                    'bg-landing-stars',
-                    'bg-refine-cyan-alt',
-                    'rounded-xl',
-                    'p-4',
-                    'landing-lg:p-12',
-                    'overflow-hidden'
+    
+    <div className="relative landing-md:-mt-24">
+      <div className="absolute top-0 left-0 w-full h-[50px] pointer-events-none z-[5]">
+          <BackgroundAnimation/>
+      </div>
+      <div
+          ref={ref}
+          className={clsx(
+                      
+                      "grid",
+                      "grid-cols-1 landing-md:grid-cols-2 landing-lg:grid-cols-3",
+                      "gap-4 landing-sm:gap-12 landing-md:gap-6",
+                      "mb-4 landing-sm:mb-8 landing-md:mb-2",
+                      'rounded-xl',
+                      'p-4',
+                      'landing-lg:p-12',
+                      'overflow-hidden'
 
-                )}
-            >
-                {list.map((item, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className={clsx(
-                                "p-4 landing-sm:p-4",
-                                "flex",
-                                "flex-col landing-sm:flex-row landing-md:flex-col",
-                                "items-start",
-                                "gap-6",
-                                "dark:bg-landing-noise",
-                                "dark:bg-slate-800 bg-slate-50",
-                                "rounded-2xl landing-sm:rounded-3xl",
-                                'border-2',
-                                'hover:border-refine-green',
-                                index%2==0
-                                ?isIntersecting?'animate-focus-slide-left':''
-                                :isIntersecting?'animate-focus-slide-right':''
+                  )}
+              >
+                  {list.map((item, index) => {
+                      return (
+                          <div
+                              key={index}
+                              className={clsx(
+                                  "p-2 landing-sm:p-4",
+                                  "flex",
+                                  "flex-col landing-sm:flex-row landing-md:flex-col",
+                                  "items-start",
+                                  "gap-6",
+                                  "dark:bg-landing-noise",
+                                  "dark:bg-slate-800 bg-slate-50",
+                                  "rounded-2xl landing-sm:rounded-3xl",
+                                  'border-2',
+                                  'hover:border-refine-green',
+                                  index%2==0
+                                  ?isIntersecting?'animate-focus-slide-left':''
+                                  :isIntersecting?'animate-focus-slide-right':''
+                                  ,
+                                  "z-10"
 
-                            )}
-                        >
-                            <div>{item.icon}</div>
-                            <div className={clsx("flex", "flex-col", "gap-4")}>
-                                <div
-                                    className={clsx(
-                                        "text-xl",
-                                        "font-semibold",
-                                        "text-slate-900 dark:text-slate-50",
-                                    )}
-                                >
-                                    {item.title}
-                                </div>
-                                <div
-                                    className={clsx(
-                                        "text-base",
-                                        "dark:text-slate-400 text-slate-600",
-                                    )}
-                                >
-                                    {item.description}
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-        </div>
+                              )}
+                          >
+                              <div>{item.icon}</div>
+                              <div className={clsx("flex", "flex-col", "gap-4")}>
+                                  <div
+                                      className={clsx(
+                                          "text-xl",
+                                          "font-semibold",
+                                          "text-slate-900 dark:text-slate-50",
+                                      )}
+                                  >
+                                      {item.title}
+                                  </div>
+                                  <div
+                                      className={clsx(
+                                          "text-base",
+                                          "dark:text-slate-400 text-slate-600",
+                                      )}
+                                  >
+                                      {item.description}
+                                  </div>
+                              </div>
+                          </div>
+                      );
+                  })}
+          </div>
+    </div>
 
-
-        <GetInTouchCTA
+    <GetInTouchCTA
           className={"w-full landing-lg:max-w-[792px] mx-auto"}
         />
+    
     </>
+    
   )
 }

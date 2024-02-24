@@ -128,14 +128,9 @@ export const Footer = () => {
               "justify-between"
             )}
           >
-            <div
-              className={clsx(
-                "hover:no-underline",
-                "text-slate-900 dark:text-slate-0"
-              )}
-            >
+            <Link href={'/'}>
               <Image src="/logo.png" alt="logo" height={150} width={150}/>
-            </div>
+            </Link>
             
           </div>
           <div
@@ -241,7 +236,7 @@ export const Footer = () => {
               "font-normal"
             )}
           >
-            {"©2024, Zentropy Technologies.  Finance | Technology | Data Science "}
+            {"© 2024, Zentropy Technologies.  Finance | Technology | Data Science "}
             <HeartOutlinedIcon
               className={clsx("ml-1", "text-refine-red", "inline", "leading-5")}
             />
