@@ -1,0 +1,43 @@
+.scrollmagic-pin-spacer {
+  padding-bottom: 0 !important;
+}
+
+.glowing-line {
+  position: absolute;
+  left: 50%; /* Position it at the center horizontally */
+  top: 0; /* Align it to the top */
+  width: 2px; /* Adjust the width as needed */
+  height: 100%; /* Make it cover the full height of the parent */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 255, 255, 0),
+    cyan,
+    rgba(0, 255, 255, 0)
+  ); /* Change the glowing color to cyan and adjust the gradient */
+  box-shadow: 0 0 30px blue; /* Add shadow effect with the same color */
+  animation: glow 2s infinite alternate; /* Apply glowing animation */
+  content: ""; /* Required for pseudo-elements */
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.5; /* Start with some opacity */
+  }
+  to {
+    opacity: 1; /* Transition to full opacity */
+  }
+}
+
+@keyframes beam {
+  0% {
+    transform: translateY(-10%); /* Start from the top */
+    opacity: 0; /* Start with no opacity */
+  }
+  50% {
+    opacity: 1; /* Reach full opacity halfway through the animation */
+  }
+  100% {
+    transform: translateY(10%); /* End at the bottom */
+    opacity: 0; /* Fade out completely */
+  }
+}

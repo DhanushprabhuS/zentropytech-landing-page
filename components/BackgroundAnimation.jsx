@@ -1,9 +1,9 @@
+import clsx from 'clsx';
 import React from 'react';
 
 const BackgroundAnimation = () => (
-  <div>
     <svg
-      className="BgAnimation__svg"
+      className="BgAnimation__svg w-[400px] h-[400px] landing-md:w-[550px] landing-md:h-[500px]"
       viewBox="0 0 602 602"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -27,6 +27,20 @@ const BackgroundAnimation = () => (
           id="path_2"
         />
       </g>
+
+      {/* Image placed in the center */}
+      <image
+        xlinkHref="logo.png" // 
+        x="221" // Adjust x coordinate to position the image horizontally
+        y="221" // Adjust y coordinate to position the image vertically
+        width="150" // Adjust width of the image
+        height="150" // Adjust height of the image
+        className={clsx(
+          "dark:text-refine-cyan-alt dark:drop-shadow-[0_0_50px_rgba(71,235,235,1)]",
+          "text-refine-indigo drop-shadow-[0_0_50px_rgba(51,51,255,0.7)]"
+        )}
+      />
+
       <ellipse
         cx="295.027"
         cy="193.118"
@@ -359,7 +373,6 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
-  </div>
 );
 
 export default BackgroundAnimation;

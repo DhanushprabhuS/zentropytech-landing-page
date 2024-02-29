@@ -88,8 +88,8 @@ export const TopAnnouncement = () => {
 
 const Text = () => {
   return (
-    <a
-      href="https://github.com/DhanushprabhuS"
+    <div
+      
       className={clsx(
         "relative lg:absolute",
         "px-2 lg:px-0",
@@ -109,18 +109,19 @@ const Text = () => {
       )}
     >
       <div className={clsx("ml-2", "not-prose")}>
-        ⚠️ This page is developed for learning puropse and not offical site {" "}
-        <span
+        ⚠️ This is a demo site. Not official. For the official site, please visit [zentropytech.com]. Thanks for visiting! {" "}
+        <a
           className={clsx(
             "text-refine-cyan-alt hover:text-refine-cyan-alt",
             "font-semibold",
             "ml-2"
           )}
+          href="https://zentropytech.com"
         >
           Learn More
-        </span>
+        </a>
       </div>
-    </a>
+    </div>
   )
 }
 

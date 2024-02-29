@@ -189,6 +189,10 @@
   @apply landing-xl:landing-wide-mask;
 }
 
+.kanish {
+  color: "red";
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: rgb(24, 144, 255);
