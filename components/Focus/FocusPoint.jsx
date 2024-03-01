@@ -83,17 +83,6 @@ useEffect(() => {
 
 export const FocusPoint = () => {
 
-  const [isMobile,setIsMobile] = React.useState(false);
-
-  React.useEffect(()=>{
-      if(window.innerWidth<780){
-        setIsMobile(true);
-      }else
-      {
-        setIsMobile(false);
-      }
-  },[])
-
 
   return (
   <>
@@ -161,7 +150,7 @@ export const FocusPoint = () => {
     <div className="relative flex flex-col justify-end landing-md:flex-row landing-md:items-start mx-4 overflow-hidden">
       <Controller>
         <Scene
-          duration={isMobile?'2200':'3000'}
+          duration={'3000'}
           triggerHook={0.1}
           pin={'#pin'}
         >
