@@ -83,9 +83,20 @@ useEffect(() => {
 
 export const FocusPoint = () => {
 
+  const [isMobile,setIsMobile] = React.useState(false);
+
+  React.useEffect(()=>{
+      if(window.innerWidth<780){
+        setIsMobile(true);
+      }else
+      {
+        setIsMobile(false);
+      }
+  },[])
+
 
   return (
-    <>
+  <>
     <div
       id="focus"
       className={clsx(
@@ -147,33 +158,33 @@ export const FocusPoint = () => {
       </p>
     </div>
     
-    <div className="flex flex-col landing-md:flex-row landing-md:items-start mx-4 overflow-hidden">
-          <Controller>
-            <Scene
-              duration={'2760'}
-              triggerHook={0.1}
-              pin={'#pin'}
-            >
-              <div className="w-full landing-md:w-1/2" id="pin">
-                <BackgroundAnimation/>
-              </div>
-            </Scene>
-        </Controller>
-        <div
-            className={clsx(
+    <div className="relative flex flex-col justify-end landing-md:flex-row landing-md:items-start mx-4 overflow-hidden">
+      <Controller>
+        <Scene
+          duration={isMobile?'2200':'3000'}
+          triggerHook={0.1}
+          pin={'#pin'}
+        >
+        <div className="w-full landing-md:w-1/2" id="pin">
+          <BackgroundAnimation/>
+        </div>
+        </Scene>
+      </Controller>
+      <div
+          className={clsx(
                         'flex flex-col',
                         'items-center justify-center landing-md:items-center',
                         'space-y-12 landing-md:space-y-24',
                         'w-full landing-md:w-1/2',
                         'relative',
-                        
+                        'pb-96'
           )}>
-              <div className="glowing-line"></div>
-                    {list.map((item, index) => {
-                        return (
-                            <div
-                                key={index}
-                                className={clsx(
+        <div className="glowing-line"></div>
+          {list.map((item, index) => {
+                return (
+                  <div
+                      key={index}
+                      className={clsx(
                                     "p-4",
                                     "flex",
                                     "flex-col",
@@ -181,47 +192,41 @@ export const FocusPoint = () => {
                                     "gap-1",
                                     'bg-landing-noise',
                                     'bg-slate-900',
-                                    "rounded-lg landing-sm:rounded-xl",
+                                    "rounded-lg",
                                     'border',
                                     'border-refine-cyan',
                                     'w-full',
                                     'z-[1]'
                                 )}
+                    >
+                    <div className="h-[150px] w-[150px] landing-sm:h-auto landing-sm:w-auto">{item.icon}</div>
+                    <div className={clsx("flex", "flex-col", "gap-4")}>
+                      <div
+                          className={clsx(
+                              "text-xl",
+                              "font-semibold",
+                              "text-slate-900 dark:text-slate-300",
+                              'text-left'
+                              )}
                             >
-                                <div className="h-[150px] w-[150px] landing-sm:h-auto landing-sm:w-auto">{item.icon}</div>
-                                <div className={clsx("flex", "flex-col", "gap-4")}>
-                                    <div
-                                        className={clsx(
-                                            "text-xl",
-                                            "font-semibold",
-                                            "text-slate-900 dark:text-slate-50",
-                                        )}
-                                    >
-                                        {item.title}
-                                    </div>
-                                    <div
-                                        className={clsx(
-                                            "text-md",
-                                            "font-normal",
-                                            "text-slate-900 dark:text-slate-300",
-                                            'text-left'
-                                        )}
-                                    >
-                                        {item.description}
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
+                              {item.title}
+                      </div>
+                      <div
+                        className={clsx(
+                                  "text-md",
+                                  "font-normal",
+                                  "text-slate-900 dark:text-slate-400",
+                                  'text-left'
+                                  )}>
+                                  {item.description}
+                      </div>
+                    </div>
+                </div>);
+            })}
         </div>
     </div>
-   
-    <GetInTouchCTA
-          className={"w-full landing-lg:max-w-[792px] mx-auto"}
-        />
-
-    </>
-
-  )
+    <GetInTouchCTA className={"w-full landing-lg:max-w-[792px] mx-auto mt-0"} />
+</>
+)
 }
 

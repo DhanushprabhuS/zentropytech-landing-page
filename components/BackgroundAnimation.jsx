@@ -3,7 +3,7 @@ import React from 'react';
 
 const BackgroundAnimation = () => (
     <svg
-      className="BgAnimation__svg w-[400px] h-[400px] landing-md:w-[550px] landing-md:h-[500px]"
+      className="BgAnimation__svg w-[350px] h-[400px] landing-md:w-[550px] landing-md:h-[500px]"
       viewBox="0 0 602 602"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
