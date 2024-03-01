@@ -4,7 +4,7 @@ import clsx from "clsx"
 import Image from 'next/image'
 import { GetInTouchCTA } from "./GetInTouchCTA"
 import BackgroundAnimation from "../BackgroundAnimation";
-import { Controller, Scene } from 'react-scrollmagic';
+import { Controller, Scene } from 'react-scrollmagic-r18';
 import './FocusPoint.css'
 
 import tradeSvg from '../../svgs/trade.svg';
