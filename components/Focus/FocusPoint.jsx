@@ -1,11 +1,11 @@
 'use client';
 import React from "react";
-import clsx from "clsx"
-import Image from 'next/image'
-import { GetInTouchCTA } from "./GetInTouchCTA"
+import clsx from "clsx";
+import './FocusPoint.css';
+import Image from 'next/image';
+import { GetInTouchCTA } from "./GetInTouchCTA";
 import BackgroundAnimation from "../BackgroundAnimation";
 import { Controller, Scene } from 'react-scrollmagic-r18';
-import './FocusPoint.css'
 
 import tradeSvg from '../../svgs/trade.svg';
 import tradePortfolioSvg from '../../svgs/trade-portfolio.svg';
@@ -56,30 +56,6 @@ const list =
     },
 ]
 
-
-
-/*
-"Algorithmic trading takes center stage, where we specialize in leveraging advanced AI for precision and success in financial markets."
-"Crypto trading stands out as our expertise, harnessing innovative strategies and AI technology for profitable investments."
-"Trade portfolio management is our primary focus, optimizing investment strategies and maximizing returns through advanced algorithms."
-"Data science serves as the central pillar, driving innovation and powering insightful decision-making for success."
-"Data warehouse solutions are the cornerstone, empowering businesses with robust data storage and analytics capabilities."
-"Blockchain technology leads our focus, revolutionizing industries with decentralized solutions for security, transparency, and efficiency."
-*/
-
-/*
-const ref = useRef(null);
-const [isIntersecting, setIsIntersecting] = useState(false);
-useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting);
-    });
-
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-*/
 
 export const FocusPoint = () => {
 

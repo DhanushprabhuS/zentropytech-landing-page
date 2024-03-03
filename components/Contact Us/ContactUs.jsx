@@ -4,24 +4,9 @@ import Image from 'next/image'
 import { EmailIcon } from './EmailIcon'
 import { MarkerIcon } from './MarkerIcon'
 import { CallIcon } from './CallIcon'
+import { emailId, locations, mobileNo } from '@/utils/contact-us-data'
 
-const locations = [
-    {
-        addr: `Guindy, Chennai,`,
-        state: 'TamilNadu-600032',
-        color : 'refine-blue'
-    },
-    {
-        addr: 'Palavanthangal, Chennai',
-        state:"TamilNadu-600114",
-        color : 'refine-blue'
-    },
-    {
-        addr: 'Kondapur, Hyderabad,',
-        state: "Telangana-500032",
-        color : 'refine-blue'
-    }
-]
+
 
 const ContactUs = () => {
   return (
@@ -36,15 +21,15 @@ const ContactUs = () => {
         
         )}>
         <h2
-          className={clsx(
+            className={clsx(
             "text-2xl landing-sm:text-[32px]",
             "tracking-tight",
             "text-start",
             "p-0",
             "dark:text-white"
-          )}
+        )}
         >
-          Reach out and{" "}
+            Reach out and{" "}
           <span
             className={clsx(
               "font-semibold",
@@ -73,14 +58,15 @@ const ContactUs = () => {
             "mt-4 landing-sm:mt-6",
             "max-w-md",
             "text-base",
+            "font-semibold",
             "dark:text-slate-400",
           )}
         >
-          {`"Let's create something extraordinary together!"`}
+          {`Let's create something extraordinary together! 🌟`}
         </p>
       </div>
         
-      <div
+    <div
                     className={clsx(
                         "xl:max-w-[1016px] lg:py-16",
                         "lg:max-w-[912px] lg:py-16",
@@ -94,7 +80,7 @@ const ContactUs = () => {
                         className={clsx(
                             "text-sm leading-6",
                             "md:text-2xl md:leading-8",
-                            "text-center text-slate-800 dark:text-slate-200",
+                            "text-center text-slate-800 dark:text-slate-300",
                             "mb-8 lg:mb-16",
                         )}
                     >
@@ -129,10 +115,10 @@ const ContactUs = () => {
                                     <CallIcon className="text-refine-green"/>
                                 </div>
                                 <a
-                                    href="tel:+919849061671"
+                                    href={"tel:"+mobileNo}
                                     className="text-slate-700 dark:text-slate-300 hover:no-underline no-underline"
                                 >
-                                    +91 9849061671
+                                    {mobileNo}
 
                                 </a>
                             </div>
@@ -150,10 +136,10 @@ const ContactUs = () => {
                                     <EmailIcon className="text-refine-pink"/>
                                 </div>
                                 <a
-                                    href="mailto:contact@zentropytech.com"
+                                    href={"mailto:"+"contact@zentropytech.com"}
                                     className="text-slate-700 dark:text-slate-300 hover:no-underline no-underline"
                                 >
-                                    contact@zentropytech.com
+                                    {emailId}
                                 </a>
                             </div>
 

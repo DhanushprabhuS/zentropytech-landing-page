@@ -12,7 +12,7 @@ export const LandingHeroCenterSvg = props => (
     >
       <image
         className="hidden dark:block"
-        href="https://zentropytech.com/images/logo.png"
+        href="/logo.png"
         x={0}
         y={0}
         width={158}
@@ -20,7 +20,7 @@ export const LandingHeroCenterSvg = props => (
       />
       <image
         className="block dark:hidden"
-        href="https://zentropytech.com/images/logo.png"
+        href="/logo.png"
         x={0}
         y={0}
         width={158}

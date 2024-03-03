@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import HeroSvgComponent from './HeroSvgComponent';
 
 const Hero = () => {
-  return (
+return (
 <div
             className={clsx(
                 "flex",
@@ -53,7 +53,7 @@ const Hero = () => {
                                 "text-white ",
                             )}
                         >
-                           Zentropy Technologies
+                        Zentropy Technologies
                         </h1>
                         <p
                             className={clsx(
@@ -64,15 +64,15 @@ const Hero = () => {
                                 "h-9 md:h-14"
                             )}
                         >
-                          Gateway to enterprise {" "}
+                        Gateway to enterprise {" "}
                             <span
-                              className={clsx(
+                            className={clsx(
                                 "dark:text-refine-cyan-alt dark:drop-shadow-[0_0_30px_rgba(71,235,235,0.75)]",
                                 "text-refine-indigo drop-shadow-[0_0_30px_rgba(51,51,255,0.3)]"
-                              )}
+                            )}
                             >
                             <TypeAnimationTagLine/>
-                          </span>
+                        </span>
                         </p>
                     </div>
                     <div
@@ -140,7 +140,7 @@ const Hero = () => {
                 <HeroSvgComponent/>
             </div>
         </div>
-  )
+)
 }
 
 export default Hero

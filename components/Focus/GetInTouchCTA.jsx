@@ -25,7 +25,7 @@ export const GetInTouchCTA = props => {
             "dark:text-slate-300 text-slate-600"
           )}
         >
-          Ready to Elevate with Us? Join our Team!
+          Ready to reach new heights? Join our team today!
         </h2>
         <a href="#contact">
         <EnterpriseGetInTouchButton/>

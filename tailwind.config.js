@@ -480,7 +480,6 @@ module.exports = {
               "landing-github-stars-border-bg-size": "72px 72px",
           },
           animation: {
-            "meteor-effect": "meteor 5s linear infinite",
               "spin-slow": "spin 3s linear infinite",
               beat: "2s ease-in-out 1.5s infinite normal forwards running landing-hero-beat",
               "playground-slide-down":
@@ -593,48 +592,40 @@ module.exports = {
                 },
             },
             reveal: {
-                  "0%": {
-                      opacity: 0,
-                  },
-                  "100%": {
-                      opacity: 1,
-                  },
-              },
-              meteor: {
-                "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
-                "70%": { opacity: 1 },
+                "0%": {
+                    opacity: 0,
+                },
                 "100%": {
-                  transform: "rotate(215deg) translateX(-500px)",
-                  opacity: 0,
+                opacity: 1,
                 },
             },
-              "code-scroll": {
-                  "0%": {
-                      transform: "translateY(0)",
-                  },
-                  "100%": {
-                      transform: "translateY(-448px)",
-                  },
-              },
-              "walkthrough-bounce": {
-                  "0%": {
-                      transform: "translateY(4%)",
-                  },
-                  "50%": {
-                      transform: "none",
-                  },
-                  "100%": {
-                      transform: "translateY(4%)",
-                  },
-              },
-              "hackathon-button-bg": {
-                  "0%": {
-                      backgroundPosition: "0% 0%",
-                  },
-                  "100%": {
-                      backgroundPosition: "100% 0%",
-                  },
-              },
+            "code-scroll": {
+                "0%": {
+                    transform: "translateY(0)",
+                },
+                "100%": {
+                    transform: "translateY(-448px)",
+                },
+            },
+            "walkthrough-bounce": {
+                "0%": {
+                    transform: "translateY(4%)",
+                },
+                "50%": {
+                    transform: "none",
+                },
+                "100%": {
+                    transform: "translateY(4%)",
+                },
+            },
+            "hackathon-button-bg": {
+                "0%": {
+                    backgroundPosition: "0% 0%",
+                },
+                "100%": {
+                    backgroundPosition: "100% 0%",
+                },
+            },
               "landing-hero-beat": {
                   "0%": {
                       opacity: 0.4,

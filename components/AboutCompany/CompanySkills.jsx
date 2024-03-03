@@ -4,29 +4,8 @@ import React from "react"
 
 import { useInView } from "framer-motion"
 import { LandingSectionCtaButton } from "../LandingButtonCTA"
+import { skillList as list } from "@/utils/about-us-data"
 
-const list = [
-  {
-    icon: '🧩',
-    label: "Problem-solving",
-  },
-  {
-    icon: '🌟',
-    label: "Adaptability",
-  },
-  {
-    icon: '🎨',
-    label: "Innovation",
-  },
-  {
-    icon: '🤝',
-    label: "Teamwork",
-  },
-  {
-    icon: '📚',
-    label: "Learning",
-  }
-]
 
 export const CompanySkills = ({ className }) => {
   const ref = React.useRef(null)
@@ -51,7 +30,6 @@ export const CompanySkills = ({ className }) => {
             "flex",
             "flex-col",
             "rounded-lg",
-           
             "py-3.5",
             "shadow-[0px_-1.5px_0px_rgba(237,242,247,0.5)] dark:shadow-[0px_-1.5px_0px_rgba(20,20,31,0.5)]",
             "drop-shadow-sm",

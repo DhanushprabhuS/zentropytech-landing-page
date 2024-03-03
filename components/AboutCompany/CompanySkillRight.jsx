@@ -56,8 +56,8 @@ export const CompanySkillsRight = ({ className }) => {
       >
         <Image 
           className={clsx(
-           'w-full h-72',
-           "rounded-xl landing-sm:rounded-2xl",
+          'w-full h-72',
+          "rounded-xl landing-sm:rounded-2xl",
             "delay-300",
             1 ? "translate-x-0" : "translate-x-full",
             1 ? "opacity-100" : "opacity-0",
