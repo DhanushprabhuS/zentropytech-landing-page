@@ -58,3 +58,26 @@ export const skillList = [
         label: "Learning",
     }
 ]
+
+export const rightList = [
+    {
+      "title":"1. Algorithmic Trading",
+      "image":'/right-skills/trading-on-hands.png',
+      "description":["Exchange connectivity and trade execution", "Smart order routing","Strategy development and implementation "]
+    },
+    {
+      "title":"2. Crypto Trading & Blockchain",
+      "image":'/right-skills/crypto1.jpeg',
+      "description":["ICO infrastructure","Multiple exchange connectivity","Customised wallets and smart contracts","Blockchain based applications"]
+    },
+    {
+      "title":"3. Trade Portfolio Management",
+      "image":'/right-skills/portfolio.png',
+      "description":["Trade and fund accounting", "Risk management",  "Reconciliation systems",  "Customised reporting and workflow management"]
+    },
+    {
+      "title":"4. Web Developement",
+      "image":'/right-skills/web.png',
+      "description":["Fullstack web developement","Frontend Design", "UI", "UX", "Responsive", "Landing pages"]
+    }
+  ]

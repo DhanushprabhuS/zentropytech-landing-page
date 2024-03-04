@@ -130,7 +130,7 @@ export const FocusPoint = () => {
           triggerHook={0.1}
           pin={'#pin'}
         >
-        <div className="w-full landing-md:w-1/2" id="pin">
+        <div className="w-full landing-md:w-1/2 items-center justify-center flex" id="pin">
           <BackgroundAnimation/>
         </div>
         </Scene>
