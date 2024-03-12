@@ -21,36 +21,43 @@ const list =
     {
         icon: <SvgTemplate svg={tradeSvg} title={'Algo Trading'}/>,
         title: "Algorithmic Trading",
+        bg: "dark:bg-landing-sweet-spot-glow-red-dark bg-landing-sweet-spot-glow-red-light",
+        titleColor: 'text-refine-red',
         description:
             "Algorithmic trading is the core focus at Zentropy Technologies, where we specialize in leveraging advanced AI for precision and success in financial markets.",
     },
     {
         icon: <SvgTemplate svg={cryptoSvg} title={'Crypto Trading'}/>,
         title: "Crypto Trading",
+        bg: "dark:bg-landing-sweet-spot-glow-orange-dark bg-landing-sweet-spot-glow-orange-light",
         description:
             "Crypto trading takes center stage at Zentropy Technologies, where we excel in harnessing innovative strategies and AI technology for profitable investments.",
     },
     {
         icon: <SvgTemplate svg={tradePortfolioSvg} title={'Trade porfolio'}/>,
         title: "Trade Portfolio Management",
+        bg: "dark:bg-landing-sweet-spot-glow-yellow-dark bg-landing-sweet-spot-glow-yellow-light",
         description:
             "Trade portfolio management is the primary focus at Zentropy Technologies, where we specialize in optimizing investment strategies and maximizing returns through advanced algorithms.",
     },
     {
       icon: <SvgTemplate svg={dataScienceSvg} title={'Data Science'}/>,
       title: "Data Science",
+      bg: "dark:bg-landing-sweet-spot-glow-cyan-dark bg-landing-sweet-spot-glow-cyan-light",
       description:
           "Data science stands as the central pillar of Zentropy Technologies, driving innovation and powering insightful decision-making for our clients' success.",
     },
     {
         icon: <SvgTemplate svg={DWHSvg} title={'Data Wearhouse'}/>,
         title: "Data Warehouse",
+        bg: "dark:bg-landing-sweet-spot-glow-blue-dark bg-landing-sweet-spot-glow-blue-light",
         description:
             "Data warehouse solutions are the cornerstone of Zentropy Technologies, empowering businesses with robust data storage and analytics capabilities for informed decision-making.",
     },
     {
         icon:  <SvgTemplate svg={blockSvg} title={'Block Chain'}/>,
         title: "Block Chain",
+        bg: "dark:bg-landing-sweet-spot-glow-indigo-dark bg-landing-sweet-spot-glow-indigo-light",
         description:
             "Deploy to your own infrastructure without worrying about regulations, performance, and stability. Maintain your current security best practices with no compromises.",
     },
@@ -75,13 +82,15 @@ export const FocusPoint = () => {
         "w-full",
         "landing-md:h-[264px]",
         "landing-md:overflow-hidden",
-        'pt-12'
+        'pt-12',
+        'px-4',
+        'py-2',
+        "overflow-hidden"
       )}
     >
       <Image
         className={clsx(
           "absolute",
-          "hidden landing-md:block",
           "w-[1200px]",
           "max-w-[1200px]"
         )}
@@ -114,7 +123,7 @@ export const FocusPoint = () => {
         className={clsx(
           "text-base",
           "max-w-[588px]",
-          "dark:text-slate-300 text-slate-600"
+          "dark:text-slate-400 text-slate-700"
         )}
       >
         Our main focus lies in algorithmic trading, crypto & blockchain, and data science.
@@ -126,7 +135,7 @@ export const FocusPoint = () => {
     <div className="relative flex flex-col justify-end landing-md:flex-row landing-md:items-start mx-4 overflow-hidden">
       <Controller>
         <Scene
-          duration={'3000'}
+          duration={'3100'}
           triggerHook={0.1}
           pin={'#pin'}
         >
@@ -150,28 +159,32 @@ export const FocusPoint = () => {
                   <div
                       key={index}
                       className={clsx(
-                                    "p-4",
+                                    "p-8",
                                     "flex",
                                     "flex-col",
                                     "items-center",
                                     "gap-1",
-                                    'bg-landing-noise',
+                                    "landing-xs:bg-landing-sweet-spot-glow-position-xs",
+                                    "landing-lg:bg-landing-sweet-spot-glow-position-lg",
+                                    "landing-md:bg-landing-sweet-spot-glow-position-md",
+                                    "landing-xs:bg-landing-sweet-spot-glow-size-xs",
+                                    "landing-lg:bg-landing-sweet-spot-glow-size-lg",
+                                    item?.bg,
                                     'bg-slate-900',
                                     "rounded-lg",
-                                    'border',
                                     'border-refine-cyan',
                                     'w-full',
                                     'z-[1]'
                                 )}
                     >
-                    <div className="h-[150px] w-[150px] landing-sm:h-auto landing-sm:w-auto">{item.icon}</div>
+                    <div className="h-[150px] w-[150px] landing-md:w-[250px] landing-sm:h-auto landing-sm:w-auto">{item.icon}</div>
                     <div className={clsx("flex", "flex-col", "gap-4")}>
                       <div
                           className={clsx(
-                              "text-xl",
+                              "text-xl landing-md:text-2xl",
                               "font-semibold",
-                              "text-slate-900 dark:text-slate-300",
-                              'text-left'
+                              "text-slate-900 dark:text-slate-400",
+                              'text-left',
                               )}
                             >
                               {item.title}
@@ -181,7 +194,7 @@ export const FocusPoint = () => {
                                   "text-md",
                                   "font-normal",
                                   "text-slate-900 dark:text-slate-400",
-                                  'text-left'
+                                  'text-left',
                                   )}>
                                   {item.description}
                       </div>
@@ -190,7 +203,7 @@ export const FocusPoint = () => {
             })}
         </div>
     </div>
-    <GetInTouchCTA className={"w-full landing-lg:max-w-[792px] mx-auto mt-0"} />
+    <GetInTouchCTA className={"w-full landing-lg:max-w-[892px] mx-auto mt-0"} />
 </>
 )
 }

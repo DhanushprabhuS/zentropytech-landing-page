@@ -4,35 +4,28 @@ import React from "react"
 import Image from 'next/image'
 import { useState } from "react"
 import { LandingSectionCtaButton } from "../LandingButtonCTA"
-import './about-company.css';
-import right from "../../svgs/arrow-right.svg"
-import left from "../../svgs/arrow-left.svg"
 import { rightList as list } from "@/utils/about-us-data"
+
 
 
 export const CompanySkillsRight = ({ className }) => {
 
-  //const ref = useRef(null)
-  //const inView = useInView(ref)
 
   const [activeIndex, setActiveIndex] = useState(0)
   const activeListItem = list[activeIndex]
-
-  //const [shouldIncrement, setShouldIncrement] = useState(true)
-
-  /*
-  useEffect(() => {
+  
+  React.useEffect(() => {
     
     let interval
-    if (inView) {
+    if (true) {
       interval = setInterval(() => {
         setActiveIndex(prev => (prev + 1) % list.length)
       }, 5000)
     }
 
     return () => clearInterval(interval)
-  }, [shouldIncrement, inView])
-  */
+  }, [])
+  
 
 
   return (
@@ -49,23 +42,8 @@ export const CompanySkillsRight = ({ className }) => {
           
         )}
       >
-        <div className="relative flex space-x-2 items-center">
-          <div className={clsx("left-arrow",activeIndex==0?'cursor-not-allowed':'')} onClick={()=>{ if(activeIndex>0){setActiveIndex(prev => (prev - 1) % list?.length)}}}>
-          <Image src={left} width={30} height={30} alt={'icons'} className="bg-refine-blue rounded-full"  />
-          </div>
-          <Image 
-          className={clsx(
-          'w-full h-72',
-          "rounded-xl landing-sm:rounded-2xl",
-          )}
-          width={500}
-          height={500}
-          src={activeListItem?.image}  
-          alt={activeListItem?.title}
-          />
-          <div className="right-arrow" onClick={()=>{ setActiveIndex(prev => (prev + 1) % list?.length)}}>
-            <Image src={right} width={30} height={30} alt={'icons'} className="bg-refine-blue rounded-full"  />
-          </div>
+        <div className="flex items-center">
+          <Image src={activeListItem?.svg} className="h-72 w-full" height={100} width={100} alt={"Image"}/>
         </div>
         <div
           className={clsx(
@@ -107,13 +85,13 @@ export const CompanySkillsRight = ({ className }) => {
               {activeListItem?.description.map((title,idx)=>{
                 return(
 	                    <span class="" key={idx}>
-	                        {title +" | "}
+	                      {title +" | "}
 	                    </span>
                 )
               })}
             </p>
             
-            <a href="#service">
+            <a href="#focus">
             <LandingSectionCtaButton >
               Learn more
             </LandingSectionCtaButton>

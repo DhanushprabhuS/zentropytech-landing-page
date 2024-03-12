@@ -149,7 +149,7 @@ export const CompanySkills = ({ className }) => {
               {`Start collabrating with Highly-skilled developers, grown around with the
               industry's best practices.`}
             </p>
-            <a href="#focus">
+            <a href="#service">
             <LandingSectionCtaButton >
               Learn more
             </LandingSectionCtaButton>

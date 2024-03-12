@@ -41,6 +41,7 @@ export default function Home() {
               "mt-0",
               "landing-sm:mt-8",
               "landing-lg:mt-20",
+              'mx-2'
             )}
           >
             <Hero/>

@@ -59,25 +59,35 @@ export const skillList = [
     }
 ]
 
+import cryptoSvg from "../svgs/about-us/crypto_about.svg";
+import tradingSvg from '../svgs/about-us/trading2_about.svg';
+import portfolioSvg from '../svgs/about-us/portfolio_about.svg';
+import webSvg from '../svgs/about-us/web_about.svg';
+
+
 export const rightList = [
     {
-      "title":"1. Algorithmic Trading",
+      "title":"Algorithmic Trading",
       "image":'/right-skills/trading-on-hands.png',
+      'svg': tradingSvg,
       "description":["Exchange connectivity and trade execution", "Smart order routing","Strategy development and implementation "]
     },
     {
-      "title":"2. Crypto Trading & Blockchain",
+      "title":"Crypto Trading & Blockchain",
       "image":'/right-skills/crypto1.jpeg',
+      'svg': cryptoSvg,
       "description":["ICO infrastructure","Multiple exchange connectivity","Customised wallets and smart contracts","Blockchain based applications"]
     },
     {
-      "title":"3. Trade Portfolio Management",
+      "title":"Trade Portfolio Management",
       "image":'/right-skills/portfolio.png',
+      'svg':portfolioSvg,
       "description":["Trade and fund accounting", "Risk management",  "Reconciliation systems",  "Customised reporting and workflow management"]
     },
     {
-      "title":"4. Web Developement",
+      "title":"Web Developement",
       "image":'/right-skills/web.png',
-      "description":["Fullstack web developement","Frontend Design", "UI", "UX", "Responsive", "Landing pages"]
+      'svg':webSvg,
+      "description":["Fullstack web developement","Frontend Design", "UI, UX", "Responsive", "Landing pages"]
     }
   ]
