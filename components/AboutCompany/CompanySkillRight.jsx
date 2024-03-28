@@ -84,7 +84,7 @@ export const CompanySkillsRight = ({ className }) => {
             >
               {activeListItem?.description.map((title,idx)=>{
                 return(
-	                    <span class="" key={idx}>
+	                    <span className="" key={idx}>
 	                      {title +" | "}
 	                    </span>
                 )

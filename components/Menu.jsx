@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
+import logo from '../public/logo.png'
 
 const Menu = () => {
     console.log('Welcome to .:| Zentropy Technologies |:.');
@@ -20,9 +21,9 @@ const Menu = () => {
         <>
             <nav className="relative container mx-auto top-0 left-0 right-0 flex justify-center p-4">
                 <div className="fixed bg-[#14141F]/50 rounded-full  flex items-center justify-between 
-                py-2 px-4 space-x-24 w-64 md:w-5/6 lg:w-2/3 z-10 backdrop-blur-[12px]">
+                py-2 px-4 space-x-24 w-64 md:w-5/6 lg:w-2/3 z-10 backdrop-blur-[12px] h-12">
                     <Image
-                        src={'/logo.png'} height={100} width={100} alt='Zentropy'
+                        src={logo} height={100} width={100} alt='Zentropy'
                         className="rounded-xl justify-start"
                     />
                     <div className="hidden md:flex justify-end items-center space-x-8">

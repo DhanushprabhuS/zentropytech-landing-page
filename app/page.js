@@ -13,6 +13,8 @@ import { TopAnnouncement } from '@/components/TopAnnouncement';
 export default function Home() {
   //Dhanush Prabhu S
   //dhanushprabhusenthil@gmail.com
+  //Main componet of Home page
+  // has Menu, About us, Services, Focus, Contact Us, Footer
   return (
     <div
       className={clsx(
